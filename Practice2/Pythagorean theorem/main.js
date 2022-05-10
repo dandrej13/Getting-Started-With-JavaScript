@@ -26,6 +26,7 @@ let nr2 = 4;
 
 console.log(`${nr1} + ${nr2} = `, nr1 + nr2)
 
+// LENGHT CONVERSION KM MILES
 
 let mile = 209.2142;
 const conversionMToKm = 1.60934;
@@ -35,6 +36,9 @@ console.log(mToKm);
 let km = 130;
 const conversionRatio = 1.60934;
 console.log(`The distance of ${km} is equal to ${km * conversionRatio} miles`)
+
+// BMI CALCULAROR
+
 
 
 
