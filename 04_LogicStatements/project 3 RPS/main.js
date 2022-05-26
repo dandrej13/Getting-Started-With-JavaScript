@@ -13,7 +13,10 @@ let computer;
 //         break;
 
 // }
+
 computer = myArray[random];
+
+
 console.log(computer, random);
 
 
@@ -33,6 +36,8 @@ function challenge() {
     else {
         document.getElementById("message").innerHTML = "You lose";
     }
+
+
     if (computer === choice) {
         document.getElementById("message").innerHTML = "It's a tie!";
     }
