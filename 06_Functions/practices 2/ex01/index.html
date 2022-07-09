@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sign {
+            margin: 6px;
+
+
+        }
+
+        .signm {
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="logName()">Click me</button>
+    <button onclick="logNameWithParams()">Click me with param</button>
+
+    <br>
+    <br>
+    <div>
+        <input type="text" id="calc">
+        <br>
+        <input type="button" class="signm" onclick="addition()" value="+"></input>
+        <input type="button" class="sign" onclick="subtraction()" value="-"></input>
+        <input type="button" class="sign" onclick="multiplication()" value="*"></input>
+        <input type="button" class="sign" onclick="division()" value="/"></input>
+        <input type="button" class="sign" onclick="equation()" value="="></input>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

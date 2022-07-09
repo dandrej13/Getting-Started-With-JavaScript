@@ -11,6 +11,31 @@ function calcFactorial(num) {
 }
 calcFactorial(10);
 
-// Call a function and save the return value in x:
+// fibb
 
 
+let a = 0;
+let b = 1;
+let results;
+
+let fibbonaciArray = [];
+
+while (fibbonaciArray.length < 25) {
+    fibbonaciArray.push(results);
+    results = a + b;
+    a = b;
+    b = results;
+}
+console.log(fibbonaciArray);
+
+let myArray = [];
+let lesson = "Lesson"
+let statusr;
+let statusd;
+for (let i = 1; i < 11; i++) {
+    myArray.push(lesson + " " + i + " " + statusd)
+    statusr = i % 2 === 0 ? statusd = true : satusd = false;
+}
+
+
+console.log(myArray);
