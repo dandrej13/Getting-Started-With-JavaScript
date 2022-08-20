@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="output">
+        <h1>Hello</h1>
+        <div>Test</div>
+        <ul>
+            <li id="one">One</li>
+            <li class="red">Two</li>
+        </ul>
+        <div>Test</div>
+    </div>
+    <script>
+        let output = document.querySelector(".output");
+        console.dir(output.children)
+        let mainList = output.children[2];
+        mainList.id = "mainlist"
+        console.dir(mainList)
+        let divs = document.querySelectorAll("div");
+        console.dir(divs);
+        for (let i = 0; i < divs.length; i++) {
+            let element = divs[i];
+            element.id = "division" + (i + 1);
+            if ([i] % 2 == 0) {
+                element.style.color = "blue"
+
+            } else {
+                element.style.color = "red"
+
+            }
+        }
+        let classsss = output.children[2].children[1];
+        classsss.classList.add("red")
+        let color = output.children[2].children[1];
+        color.style.color = "pink";
+        console.dir(classsss);
+        console.dir(divs);
+        let divArr = [];
+
+        for (let j = 0; j < output.children.length; j++) {
+            console.dir(output.children[j].localName);
+            if (output.children[j].localName === "div") {
+                divArr.push(output.children[j].localName);
+
+            }
+            if (j % 2 === 0) {
+
+                output.children[j].style.color = "beige"
+
+            } else {
+                output.children[j].style.color = "orange"
+
+            }
+        }
+        console.dir(divArr)
+    </script>
+</body>
+
+</html>

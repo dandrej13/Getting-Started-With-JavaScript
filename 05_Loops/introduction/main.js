@@ -20,16 +20,29 @@ while (notFound && arr.length > 0) {
 console.log(arr)
 
 
-let n1 = 0;
-let n2 = 1;
+let n1 = 1;
+let n2 = 2;
 let temp;
 let fibbonaciArr = [];
 
 
-while (fibbonaciArr.length < 25) {
-    fibbonaciArr.push(n1);
+while (fibbonaciArr.length > 100) {
     temp = n1 + n2;
     n1 = n2;
     n2 = temp;
+
+
 }
+
+
+
+
+
+
+// while (fibbonaciArr.length < 25) {
+//     fibbonaciArr.push(n1);
+//     temp = n1 + n2;
+//     n1 = n2;
+//     n2 = temp;
+// }
 console.log(fibbonaciArr)

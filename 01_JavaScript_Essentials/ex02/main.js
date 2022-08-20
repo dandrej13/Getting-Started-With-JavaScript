@@ -9,3 +9,5 @@ console.log(typeof(str2));
 console.log(typeof(val1));
 console.log(typeof(val2));
 console.log(typeof(myNum));
+
+console.log(typeof str1);
