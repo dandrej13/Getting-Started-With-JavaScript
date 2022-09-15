@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS program to conver to and from celsius/ fahrenheit</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="offset-4 col-4">
+                <h2 class="text-center text-warning">Convert temperatures</h2>
+                <div class="input-group mb-3 m-3">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" id="dropdownMenuButton1">Temp</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" id="c">Celsius</a></li>
+                        <li><a class="dropdown-item" href="#" id="f">Fahrenheit</a></li>
+                    </ul>
+                    <input type="number" class="form-control" aria-label="Text input with dropdown button"
+                        id="tempInput">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                </div>
+            </div>
+        </div>
+        <p id="convertedTemp" class="text-center text-danger"></p>
+    </div>
+
+
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script>
+        // document.getElementById("c").addEventListener("click", function () {
+        //     btnTemp.innerText = this.innerText;
+        // });
+
+        // document.getElementById("f").addEventListener("click", function () {
+        //     btnTemp.innerText = this.innerText;
+        // });
+        let btnTemp = document.getElementById("dropdownMenuButton1")
+        document.getElementById("c").addEventListener("click", changeBtnName);
+        document.getElementById("f").addEventListener("click", changeBtnName);
+
+        function changeBtnName() {
+            btnTemp.innerText = this.innerText;
+        };
+
+        document.getElementById("button-addon2").addEventListener("click", convert);
+
+        function convert() {
+            let input = document.getElementById("tempInput").value;
+
+            switch (btnTemp.innerText) {
+                case "Celsius":
+                    let cel = Number(input) * 9 / 5 + 32;
+                    document.getElementById("convertedTemp").innerText = `${input}\xB0C is ${cel}\xB0F`;
+                    break;
+                case "Fahrenheit":
+                    let far = ((Number(input - 32) * 5) / 9);
+                    document.getElementById("convertedTemp").innerText = `${input}\xB0F is ${far}\xB0C`;
+                    break;
+                default:
+                    break;
+            }
+
+            document.getElementById("tempInput").value = ""
+        }
+
+
+    </script>
+</body>
+
+</html>
